@@ -7,7 +7,7 @@
 
 - name: repository rpm installation
   yum:
-      name: {{ xtradb_repo_rpm }}
+      name: "{{ xtradb_repo_rpm }}"
       state: present
 
 
