@@ -10,5 +10,39 @@
       name: "{{ xtradb_repo_rpm }}"
       state: present
 
+- name: Open port 3306 TCP
+  firewalld:
+    port: 3306/tcp
+    permanent: true
+    state: enabled
+    immediate: yes
+    
+- name: Open port 4567 TCP
+  firewalld:
+    port: 4567/tcp
+    permanent: true
+    state: enabled
+    immediate: yes
+
+- name: Open port 4567 UDP
+  firewalld:
+    port: 4567/udp
+    permanent: true
+    state: enabled
+    immediate: yes
+
+- name: Open port 4568 TCP
+  firewalld:
+    port: 4568/tcp
+    permanent: true
+    state: enabled
+    immediate: yes
+    
+- name: Open port 4444 TCP
+  firewalld:
+    port: 4444/tcp
+    permanent: true
+    state: enabled
+    immediate: yes
 
 ...
